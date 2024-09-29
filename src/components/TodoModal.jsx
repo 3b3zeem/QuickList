@@ -32,7 +32,7 @@ const dropIn = {
 
 function TodoModal({ type, modalOpen, setModalOpen, todo }) {
   const [title, setTitle] = useState("");
-  const [status, setStatus] = useState("Incomplete");
+  const [status, setStatus] = useState("incomplete");
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function TodoModal({ type, modalOpen, setModalOpen, todo }) {
       setStatus(todo.status);
     } else {
       setTitle("");
-      setStatus("Incomplete");
+      setStatus("incomplete");
     }
   }, [type, todo, modalOpen]);
 
